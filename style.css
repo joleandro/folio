@@ -1,0 +1,273 @@
+/* body{
+    min-height: 3000px;
+} */
+/* tools */
+.p-t4{
+    padding-top: 4rem;
+}
+.fs-1{
+    font-size: 1.2em;
+}
+.text-center{
+    text-align: center;
+}
+.capt{
+    left: 9%;
+}
+/* ends */
+
+/* scrolbar */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #4a148c;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+    background: crimson;
+}
+
+/* navbar */
+.sidenav{
+    background: #ddd;
+}
+.sidenav li{
+    transform: translateY(50%);
+}
+.sidenav li a::after{
+    content:'';
+    display: block;
+    border-bottom: 1px solid #000;
+    margin-top: -5px;
+    width: 50%;
+    transform: scaleX(0);
+    transition: all ease 1s;
+}
+.sidenav li a:hover::after{
+    transform: scaleX(1);
+}
+
+/* carausel */
+.carausel .slides img{
+    opacity: 0.5;
+}
+.slides h3,
+.slides h5,
+.txt{
+    text-shadow: 1px 1px 3px rgba(0,0,0, 1);
+}
+.slides img{
+    border-bottom: 3px solid #000;
+}
+.text{
+    font-size: 1rem;
+}
+.content-card{
+    display: grid;
+    justify-content: center;
+}
+.card-panel{
+    box-shadow: 3px 3px 10px rgb(0,0,0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -50%;
+    z-index: 99;
+    margin-bottom: -10%;
+}
+
+/* about */
+.about .pm-0{
+    padding:0;
+    margin: 0;
+}
+.about .b-black::after{
+    content: '';
+    display: block;
+    border-bottom: 3px solid #000;
+    margin-bottom: 4px;
+    width: 100%;
+}
+.about .pml-0{
+    padding: 0;
+    margin: 0;
+}
+.about .pml-0 label{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.3rem;
+}
+.about .container .img-rounded{
+    width: 80%;
+    border-radius: 10%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 4px;
+}
+.about .container .row .btn-cv{
+    display: flex;
+    justify-content: center;
+    background: crimson;
+    border-radius: .5em;
+    width: 80%;
+    margin-top: 4px;
+    padding: 3px;
+}
+
+/* parallax */
+.parallax-container{
+    height: 50vh;
+}
+.parallax-container .parallax{
+    filter: grayscale(1);
+    opacity: 0.7;
+}
+.paralax .typing{
+    color: #4a148c;
+}
+.paralax .typed-cursor{
+    color: gray;
+}
+.container .center{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.clients-img{
+    display: flex;
+}
+.clients-img img{
+    width: 250px;
+    margin: 1.5em;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,1));
+}
+
+/* serivices */
+.services,
+.contact{
+    background: gray;
+}
+.services .container .card-content{
+    cursor: pointer;
+}
+.services .container .card-content:hover{
+    background: crimson;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+/* portfolio */
+.portfolio .img-px{
+    width: 200px;
+    margin-bottom: 1em;
+}
+
+/* contact */
+.contact .container .card-self{
+    width: 100%;
+}
+
+/* media query */
+/* dekstop */
+@media (min-width:1024px){
+    html{
+        font-size: 100%;
+    }
+}
+/* tablet */
+@media (min-width:768px) and (max-width:1023px){
+    html{
+        font-size: 80%;
+    }
+    .text{
+        font-size: 1.2rem;
+    }
+    .paralax .container .text{
+        font-size: 3.5rem;
+    }   
+    .paralax .container .clients-img{
+        justify-content: center;
+        width: 100%;
+    }
+    .paralax .container .clients-img img{
+        width: 200px;
+    }
+}
+
+@media (max-width:767px){
+    html{
+        font-size: 100%;
+    }
+    /* carausel */
+    .carausel .slider,
+    .carausel .slides{
+        height: 350px!important;
+    }
+    .carausel .slides .caption h3{
+        font-size: 2rem;
+    }
+    .carausel .slides .caption h5{
+        font-size: 1.5rem;
+    }
+
+    /* about */
+    .about .card-panel .truncate{
+        font-size: 2rem;
+    }
+    .about .d-grid .m4,
+    .about .d-grid .m8{
+        width: 100%;
+        text-align: center;
+    }
+    .about .d-grid .img-rounded{
+        width: 200px;
+    }
+    .about .row,
+    .services .grid{
+        display: grid;
+    }
+    .row .col.m6,
+    .services .col.m4{
+        width: 100%;
+    }
+
+    /* parallax */
+    .paralax .container .text{
+        font-size: 2.5rem;
+    }
+    .paralax .parallax-container{
+        height: 90vh;
+    }   
+    .paralax .container .clients-img{
+        display: grid;
+        place-content: center;
+        width: 100%;
+    }
+    .paralax .container .clients-img img{
+        width: 40vh;
+    }    
+
+    /* portfolio */
+    .portfolio .img-px{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
